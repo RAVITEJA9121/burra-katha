@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Burra Katha — A storytelling-driven media agency specializing in personal branding. We position founders as the face of their brand and distribute powerful narratives across social media." />
+  <meta name="keywords" content="Burra Katha, personal branding, founder branding, social media storytelling, video production, Telangana, Andhra Pradesh, Instagram, YouTube" />
+  <meta name="author" content="Burra Katha Media Agency" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Burra Katha | Your Story, Their Screen." />
+  <meta property="og:description" content="Storytelling-driven personal branding for founders. We craft, shoot, edit and amplify your story across social media — rooted in the ancient art of Burra Katha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="BK C.png" />
+
+  <title>Burra Katha | Your Story, Their Screen.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo-link">
+        <img src="BK C.png" alt="Burra Katha Logo" class="nav-logo-img" />
+        <span class="nav-brand">Burra Katha</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"        class="nav-link" id="nav-home">Home</a></li>
+        <li><a href="#about"       class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#services"    class="nav-link" id="nav-services">Services</a></li>
+        <li><a href="#why-us"      class="nav-link" id="nav-why">Why Us</a></li>
+        <li><a href="#work"        class="nav-link" id="nav-work">Our Work</a></li>
+        <li><a href="#contact"     class="nav-link nav-cta" id="nav-contact">Let's Talk</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-particles" id="particles"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        Personal Branding · Storytelling Agency
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Your Face.<br />
+        <span class="hero-title-accent">Your Story.</span><br />
+        <span class="hero-title-bold">Their Screen.</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        We don't just promote your business — we make <strong>you</strong> the story.
+        Burra Katha positions founders and key people as the <em>face of their brand</em>,
+        crafting humanized narratives that connect deeply on social media.
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#contact" class="btn btn-primary" id="hero-cta-primary">Start Your Story</a>
+        <a href="#services" class="btn btn-ghost" id="hero-cta-secondary">See Our Services</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="stat-clients">2+</span>
+          <span class="stat-label">Brands Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat-videos">6</span>
+          <span class="stat-label">End-to-End Services</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat-views">100%</span>
+          <span class="stat-label">Story-Driven</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="hero-visual">
+      <div class="hero-logo-glow"></div>
+      <img src="Burra katha Final Logo.png" alt="Burra Katha Megaphone" class="hero-logo-img" id="hero-logo" />
+      <div class="hero-platform-badges">
+        <div class="platform-badge badge-ig" id="badge-instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </div>
+        <div class="platform-badge badge-yt" id="badge-youtube">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </div>
+        <div class="platform-badge badge-reel" id="badge-reels">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 16.892l-8-4.608V7.716l8 4.608v4.568z"/></svg>
+          Reels
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" id="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+  ══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual" id="about-visual">
+          <div class="about-card-stack">
+            <div class="about-card card-bg"></div>
+            <div class="about-card card-mid"></div>
+            <div class="about-main-card">
+              <img src="BK C.png" alt="Burra Katha" class="about-logo" />
+              <div class="about-card-text">
+                <h3>బుర్ర కథ</h3>
+                <p>The Art of Storytelling</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-floating-tag tag-1">👤 Personal Branding</div>
+          <div class="about-floating-tag tag-2">🎬 Founder-Led Content</div>
+          <div class="about-floating-tag tag-3">📱 Social Storytelling</div>
+        </div>
+
+        <div class="about-content" id="about-content">
+          <div class="section-tag">Who We Are</div>
+          <h2 class="section-title">Ancient Tradition.<br /><span class="text-accent">Modern Voice.</span></h2>
+          <p class="about-text">
+            <strong>Burra Katha</strong> (బుర్ర కథ) is rooted in a centuries-old Telugu performance tradition
+            from Telangana &amp; Andhra Pradesh — where storytellers brought epic, culturally rich tales
+            directly to homes and local auditoriums, creating an intimate human connection.
+          </p>
+          <p class="about-text">
+            We carry that same intimate energy into the digital world. We are a
+            <em>storytelling-driven media agency</em> specializing in <strong>personal branding</strong> —
+            positioning founders and key personnel as the living face of their brand to create
+            unique, humanized connections that no banner or TV ad ever could.
+          </p>
+          <p class="about-text">
+            Your audience doesn't just want to buy a product — they want to believe in a person.
+            We make <strong>you</strong> that person.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar" id="pillar-brand">
+              <div class="pillar-icon">👤</div>
+              <div>
+                <strong>Brand You</strong>
+                <p>Make the founder the face of the business</p>
+              </div>
+            </div>
+            <div class="pillar" id="pillar-create">
+              <div class="pillar-icon">🎬</div>
+              <div>
+                <strong>Create Stories</strong>
+                <p>Script, shoot &amp; edit compelling narratives</p>
+              </div>
+            </div>
+            <div class="pillar" id="pillar-distribute">
+              <div class="pillar-icon">🚀</div>
+              <div>
+                <strong>Distribute &amp; Grow</strong>
+                <p>Strategic social media management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SERVICES SECTION
+  ══════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header" id="services-header">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Six Steps to<br /><span class="text-accent">Your Brand's Story</span></h2>
+        <p class="section-subtitle">A complete end-to-end journey — from defining your vision to managing your digital presence.</p>
+      </div>
+
+      <div class="services-grid services-grid--6">
+
+        <!-- Step 1 -->
+        <div class="service-card service-card--featured" id="service-visionboard">
+          <div class="service-step-num">01</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">🗺️</div>
+          </div>
+          <h3 class="service-title">Personal Branding<br />Vision Board</h3>
+          <p class="service-desc">
+            We start by defining who you are as a brand. Together we map out the aesthetic,
+            goals, values, and narrative identity that will guide everything we create for you.
+          </p>
+          <ul class="service-features" id="service-visionboard-features">
+            <li>🎯 Brand Identity Clarity</li>
+            <li>🎨 Aesthetic &amp; Visual Direction</li>
+            <li>🗣️ Tone of Voice &amp; Personality</li>
+            <li>📋 Content Strategy &amp; Goals</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-visionboard-cta">Get Started →</a>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="service-card" id="service-scriptwriting">
+          <div class="service-step-num">02</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">✍️</div>
+          </div>
+          <h3 class="service-title">Scriptwriting</h3>
+          <p class="service-desc">
+            Every great story starts with the right words. We craft compelling scripts rooted
+            in your authentic voice — tailored specifically for the camera and your audience.
+          </p>
+          <ul class="service-features" id="service-script-features">
+            <li>📝 Story-First Scripting</li>
+            <li>🧠 Culturally Rooted Narratives</li>
+            <li>📱 Platform-Optimized Formats</li>
+            <li>🎭 Authentic Voice Preservation</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-script-cta">Get Started →</a>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="service-card" id="service-shoot">
+          <div class="service-step-num">03</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">🎬</div>
+          </div>
+          <h3 class="service-title">Shoot &amp; Guide</h3>
+          <p class="service-desc">
+            We don't just point a camera — we <strong>coach you</strong>. Our team directs the
+            production and guides founders on camera to ensure a natural, confident, and
+            authentic on-screen performance.
+          </p>
+          <ul class="service-features" id="service-shoot-features">
+            <li>🎥 Professional Production Crew</li>
+            <li>🧑‍🏫 On-Camera Coaching &amp; Direction</li>
+            <li>📍 On-Location or Studio Shoots</li>
+            <li>✨ Cinematic Lighting &amp; Setup</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-shoot-cta">Get Started →</a>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="service-card" id="service-editing">
+          <div class="service-step-num">04</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">✂️</div>
+          </div>
+          <h3 class="service-title">Video Editing</h3>
+          <p class="service-desc">
+            Raw footage becomes a powerful narrative. We craft the footage into a polished,
+            emotionally resonant story — with motion graphics, sound, and color grading
+            that feels premium and professional.
+          </p>
+          <ul class="service-features" id="service-editing-features">
+            <li>🎞️ Narrative-First Editing</li>
+            <li>🎨 Motion Graphics &amp; Animations</li>
+            <li>🌈 Color Grading &amp; Correction</li>
+            <li>🎵 Sound Design &amp; Music Sync</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-editing-cta">Get Started →</a>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="service-card" id="service-delivery">
+          <div class="service-step-num">05</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">📦</div>
+          </div>
+          <h3 class="service-title">Final Video Delivery</h3>
+          <p class="service-desc">
+            You receive fully optimized, high-quality video assets ready for every platform —
+            Reels, YouTube Shorts, full-length posts — in all required formats and resolutions.
+          </p>
+          <ul class="service-features" id="service-delivery-features">
+            <li>📱 Multi-Format Export (9:16, 16:9, 1:1)</li>
+            <li>🔗 Platform-Ready Files</li>
+            <li>☁️ Cloud Asset Delivery</li>
+            <li>📂 Raw &amp; Edited File Archive</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-delivery-cta">Get Started →</a>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="service-card" id="service-socialmgmt">
+          <div class="service-step-num">06</div>
+          <div class="service-icon-wrap">
+            <div class="service-icon">📊</div>
+          </div>
+          <h3 class="service-title">Social Media Management</h3>
+          <p class="service-desc">
+            We don't just hand you the content and walk away. We strategize, post, and
+            manage your social presence end-to-end — maximizing your digital reach and
+            building a loyal audience around your personal brand.
+          </p>
+          <ul class="service-features" id="service-social-features">
+            <li>📅 Content Calendar &amp; Strategy</li>
+            <li>📤 Posting &amp; Account Management</li>
+            <li>📈 Growth Analytics &amp; Reporting</li>
+            <li>💬 Community Engagement</li>
+          </ul>
+          <a href="#contact" class="service-link" id="service-social-cta">Get Started →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       WHY US SECTION
+  ══════════════════════════════════════════ -->
+  <section class="why-us" id="why-us">
+    <div class="why-us-bg"></div>
+    <div class="container">
+      <div class="section-header" id="why-header">
+        <div class="section-tag light">Why Burra Katha</div>
+        <h2 class="section-title light">People Trust People.<br /><span class="text-accent-light">Not Brands — Faces.</span></h2>
+      </div>
+
+      <div class="comparison-row">
+        <div class="comparison-card old-way" id="old-way-card">
+          <div class="comparison-icon">📺</div>
+          <h3>Generic Marketing</h3>
+          <ul class="comparison-list">
+            <li>Faceless brand promotions</li>
+            <li>TV, banners &amp; hoardings <span class="badge-expensive">Costly</span></li>
+            <li>Zero emotional connection</li>
+            <li>No authentic personality</li>
+            <li>One-size-fits-all messaging</li>
+            <li>Audiences don't remember you</li>
+          </ul>
+        </div>
+
+        <div class="vs-divider">
+          <div class="vs-circle">VS</div>
+        </div>
+
+        <div class="comparison-card new-way" id="new-way-card">
+          <div class="comparison-icon">🎤</div>
+          <h3>The Burra Katha Way</h3>
+          <ul class="comparison-list">
+            <li>Founder as the brand face <span class="badge-smart">Human</span></li>
+            <li>Instagram, YouTube &amp; Reels</li>
+            <li>Deep emotional storytelling</li>
+            <li>Authentic, rooted personality</li>
+            <li>Culturally resonant narratives</li>
+            <li>Audiences follow <em>you</em> for life</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="why-features" id="why-features">
+        <div class="why-feature" id="wf-1">
+          <div class="wf-icon">👤</div>
+          <h4>Human Connection</h4>
+          <p>People buy from people they trust. We make your audience feel they know you personally.</p>
+        </div>
+        <div class="why-feature" id="wf-2">
+          <div class="wf-icon">🎭</div>
+          <h4>Authentic Stories</h4>
+          <p>No stock footage or generic ads. Real stories, real founders, real emotion — every time.</p>
+        </div>
+        <div class="why-feature" id="wf-3">
+          <div class="wf-icon">📱</div>
+          <h4>Built for Social</h4>
+          <p>Every piece is crafted specifically for how modern audiences consume content — on 6.5" screens.</p>
+        </div>
+        <div class="why-feature" id="wf-4">
+          <div class="wf-icon">🔁</div>
+          <h4>End-to-End</h4>
+          <p>From vision to screen to growth — we handle every single step so you can focus on your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       OUR WORK / PORTFOLIO
+  ══════════════════════════════════════════ -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-header" id="work-header">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title">Founders We've Branded.<br /><span class="text-accent">Stories We've Told.</span></h2>
+        <p class="section-subtitle">Real clients whose brands we've built through authentic storytelling.</p>
+      </div>
+
+      <div class="portfolio-featured">
+
+        <!-- Client 1: Srinidhi Telangana Pindi Vantalu -->
+        <div class="portfolio-card portfolio-card--main" id="portfolio-srinidhi">
+          <div class="portfolio-card-inner">
+            <div class="portfolio-visual">
+              <div class="portfolio-icon-wrap">
+                <div class="portfolio-icon">🍛</div>
+              </div>
+              <div class="portfolio-accent-ring"></div>
+            </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Food &amp; Culture · Personal Brand</span>
+              <h3 class="portfolio-name">Srinidhi Telangana<br />Pindi Vantalu</h3>
+              <p class="portfolio-desc">
+                We helped position the founder as the authentic voice of traditional Telangana cuisine —
+                crafting a personal brand rooted in cultural pride, heritage recipes, and a storytelling style
+                that connects deeply with Telugu food lovers on Instagram and YouTube.
+              </p>
+              <div class="portfolio-tags">
+                <span class="ptag">🗺️ Vision Board</span>
+                <span class="ptag">✍️ Scriptwriting</span>
+                <span class="ptag">🎬 Shoot &amp; Guide</span>
+                <span class="ptag">📊 Social Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 2: Verron Overseas Consultancy -->
+        <div class="portfolio-card portfolio-card--main" id="portfolio-verron">
+          <div class="portfolio-card-inner">
+            <div class="portfolio-visual">
+              <div class="portfolio-icon-wrap">
+                <div class="portfolio-icon">✈️</div>
+              </div>
+              <div class="portfolio-accent-ring"></div>
+            </div>
+            <div class="portfolio-content">
+              <span class="portfolio-category">Overseas Consultancy · Founder Branding</span>
+              <h3 class="portfolio-name">Verron Overseas<br />Consultancy</h3>
+              <p class="portfolio-desc">
+                We built a credibility-first personal brand for the founder of Verron Overseas — creating
+                a trusted, expert-led narrative across social media that speaks to students and families
+                seeking overseas education and visa guidance with confidence and clarity.
+              </p>
+              <div class="portfolio-tags">
+                <span class="ptag">🗺️ Vision Board</span>
+                <span class="ptag">✍️ Scriptwriting</span>
+                <span class="ptag">🎬 Shoot &amp; Guide</span>
+                <span class="ptag">✂️ Video Editing</span>
+                <span class="ptag">📊 Social Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="work-cta" id="work-cta">
+        <p>Ready to be our next success story?</p>
+        <a href="#contact" class="btn btn-primary" id="work-cta-btn">Start Your Brand Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROCESS SECTION
+  ══════════════════════════════════════════ -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-header" id="process-header">
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Six Steps.<br /><span class="text-accent">One Complete Story.</span></h2>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step" id="step-1">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Vision Board</h3>
+            <p>We map your brand identity, aesthetic, and narrative goals before a single frame is shot.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step" id="step-2">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Scriptwriting</h3>
+            <p>We write your story — culturally rooted, camera-ready, platform-optimized scripts.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step" id="step-3">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Shoot &amp; Guide</h3>
+            <p>We direct the shoot and coach you on camera — so you look and feel naturally confident.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step" id="step-4">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Video Editing</h3>
+            <p>Crafting the raw footage into a polished, emotionally resonant narrative with professional polish.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step" id="step-5">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3>Final Delivery</h3>
+            <p>You receive optimized video assets in all formats — ready for every platform you need.</p>
+          </div>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step" id="step-6">
+          <div class="step-number">06</div>
+          <div class="step-content">
+            <h3>Social Management</h3>
+            <p>We strategize, post, and grow your audience — end-to-end, so your story keeps spreading.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header" id="testimonials-header">
+        <div class="section-tag">Testimonials</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card testimonial-card--featured" id="testimonial-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Burra Katha didn't just make content — they made me the face of my food brand. My audience now feels like they know me personally. The response has been overwhelming and deeply emotional."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-1">ST</div>
+            <div>
+              <strong>Srinidhi Telangana Pindi Vantalu</strong>
+              <span>Traditional Telangana Cuisine Brand</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" id="testimonial-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As a consultancy, trust is everything. Burra Katha built my personal brand in a way that positions me as an expert. Parents and students now reach out because they trust me — not just the business."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-2">VO</div>
+            <div>
+              <strong>Verron Overseas Consultancy</strong>
+              <span>Overseas Education &amp; Visa Consultancy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" id="testimonial-3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"<!-- PLACEHOLDER: Add testimonial from next client --> Your brand story, your way. We'd love to add yours here next."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" id="avatar-3">?</div>
+            <div>
+              <strong><!-- PLACEHOLDER: Your Name --></strong>
+              <span><!-- PLACEHOLDER: Your Brand --></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT SECTION
+  ══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info" id="contact-info">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Ready to Become<br /><span class="text-accent">The Story?</span></h2>
+          <p class="contact-intro">Let's put your face and your voice at the center of your brand. Reach out and we'll start crafting your personal brand story today.</p>
+
+          <div class="contact-details">
+            <div class="contact-item" id="contact-phone">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a>
+                <!-- PLACEHOLDER: Replace with actual phone number -->
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-email">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@burrakatha.com">hello@burrakatha.com</a>
+                <!-- PLACEHOLDER: Replace with actual email -->
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-location">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <span><!-- PLACEHOLDER: City, Telangana --></span>
+              </div>
+            </div>
+
+            <div class="contact-item" id="contact-hours">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <strong>Working Hours</strong>
+                <span>Mon – Sat · 9AM – 7PM</span>
+                <!-- PLACEHOLDER: Adjust working hours -->
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social" id="contact-social">
+            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram">
+              <!-- PLACEHOLDER: Add Instagram link href -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube">
+              <!-- PLACEHOLDER: Add YouTube link href -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-whatsapp" aria-label="WhatsApp">
+              <!-- PLACEHOLDER: Add WhatsApp link href e.g. https://wa.me/91XXXXXXXXXX -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" id="contact-form-wrap">
+          <form class="contact-form" id="contact-form" novalidate>
+            <h3 class="form-title">Start Your Journey</h3>
+
+            <div class="form-group" id="form-name-group">
+              <label for="form-name">Your Name *</label>
+              <input type="text" id="form-name" name="name" placeholder="e.g., Ravi Kumar" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group" id="form-phone-group">
+                <label for="form-phone">Phone / WhatsApp *</label>
+                <input type="tel" id="form-phone" name="phone" placeholder="+91 98765 43210" required />
+              </div>
+              <div class="form-group" id="form-email-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="form-group" id="form-business-group">
+              <label for="form-business">Business Type *</label>
+              <select id="form-business" name="business" required>
+                <option value="" disabled selected>What kind of business do you run?</option>
+                <option value="food">Food / Restaurant / Cloud Kitchen</option>
+                <option value="consultancy">Consultancy / Professional Services</option>
+                <option value="education">Education / Coaching / Training</option>
+                <option value="retail">Retail / E-commerce / Fashion</option>
+                <option value="healthcare">Healthcare / Wellness / Fitness</option>
+                <option value="realestate">Real Estate / Construction</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="form-service-group">
+              <label for="form-service">Service Required *</label>
+              <select id="form-service" name="service" required>
+                <option value="" disabled selected>What do you need?</option>
+                <option value="full">Full Package (All 6 Services)</option>
+                <option value="visionboard">Personal Branding Vision Board</option>
+                <option value="script">Scriptwriting Only</option>
+                <option value="shoot">Shoot &amp; Guide Only</option>
+                <option value="editing">Video Editing Only</option>
+                <option value="social">Social Media Management Only</option>
+                <option value="consult">Just a Discovery Call</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="form-message-group">
+              <label for="form-message">Tell Us Your Story</label>
+              <textarea id="form-message" name="message" rows="4" placeholder="Tell us about yourself, your business, and what you want to achieve with your personal brand..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+              Let's Tell Your Story 🎤
+            </button>
+
+            <p class="form-note" id="form-note">We typically respond within 2–4 hours during working hours.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand" id="footer-brand">
+            <img src="BK C.png" alt="Burra Katha" class="footer-logo" />
+            <p class="footer-tagline">Your Story, Their Screen.</p>
+            <p class="footer-desc">A storytelling-driven media agency specializing in personal branding — rooted in the ancient Telugu art of Burra Katha.</p>
+          </div>
+
+          <div class="footer-links-col" id="footer-links-services">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services" id="footer-link-vision">Vision Board</a></li>
+              <li><a href="#services" id="footer-link-script">Scriptwriting</a></li>
+              <li><a href="#services" id="footer-link-shoot">Shoot &amp; Guide</a></li>
+              <li><a href="#services" id="footer-link-edit">Video Editing</a></li>
+              <li><a href="#services" id="footer-link-social">Social Media Management</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col" id="footer-links-company">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about"     id="footer-link-about">About Us</a></li>
+              <li><a href="#work"      id="footer-link-work">Our Work</a></li>
+              <li><a href="#process"   id="footer-link-process">Our Process</a></li>
+              <li><a href="#contact"   id="footer-link-contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col" id="footer-links-contact">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="tel:+91XXXXXXXXXX" id="footer-phone">📞 +91 XXXXXXXXXX</a></li>
+              <!-- PLACEHOLDER: Replace phone number -->
+              <li><a href="mailto:hello@burrakatha.com" id="footer-email">✉️ hello@burrakatha.com</a></li>
+              <!-- PLACEHOLDER: Replace email -->
+              <li><a href="#" id="footer-ig">📸 Instagram</a></li>
+              <!-- PLACEHOLDER: Add Instagram profile link -->
+              <li><a href="#" id="footer-yt">▶️ YouTube</a></li>
+              <!-- PLACEHOLDER: Add YouTube channel link -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p id="footer-copy">© 2025 Burra Katha. All rights reserved. Made with ❤️ in Telangana.</p>
+        <p class="footer-telugu" id="footer-telugu">బుర్ర కథ — మీ కథ, మా గొంతు.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="alert">
+    <span id="toast-message">Message sent! We'll get back to you soon. 🎉</span>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
