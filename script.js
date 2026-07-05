@@ -349,6 +349,115 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  /* ─── MOBILE CAROUSEL DOT INDICATORS ────────────── */
+  function initCarousel(trackId, dotsContainerId, itemSelector) {
+    const track  = document.getElementById(trackId);
+    const dotsEl = document.getElementById(dotsContainerId);
+    if (!track || !dotsEl) return;
+
+    // If itemSelector given, only count matching children; else all children
+    const getItems = () => itemSelector
+      ? Array.from(track.querySelectorAll(':scope > ' + itemSelector))
+      : Array.from(track.children);
+
+    const isMobile = () => window.innerWidth <= 768;
+
+    function buildDots() {
+      if (!isMobile()) { dotsEl.innerHTML = ''; return; }
+      const items = getItems();
+      dotsEl.innerHTML = '';
+      items.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to item ${i + 1}`);
+        dot.addEventListener('click', () => {
+          const item = items[i];
+          track.scrollTo({ left: item.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+        });
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function updateDots() {
+      if (!isMobile()) return;
+      const items = getItems();
+      const dots  = Array.from(dotsEl.children);
+      const center = track.scrollLeft + track.offsetWidth / 2;
+      let closest = 0;
+      let minDist = Infinity;
+      items.forEach((item, i) => {
+        const itemCenter = item.offsetLeft - track.offsetLeft + item.offsetWidth / 2;
+        const dist = Math.abs(itemCenter - center);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === closest));
+    }
+
+    buildDots();
+    track.addEventListener('scroll', updateDots, { passive: true });
+    window.addEventListener('resize', buildDots);
+  }
+
+  initCarousel('services-carousel',     'services-dots',     '.service-card');
+  initCarousel('portfolio-carousel',    'portfolio-dots',    '.portfolio-card--main');
+  initCarousel('process-carousel',      'process-dots',      '.process-step');
+  initCarousel('testimonials-carousel', 'testimonials-dots', '.testimonial-card');
+
+  /* ─── WHY US TAB SWITCHER (mobile only) ─────────── */
+  const compTabs     = document.querySelectorAll('.comp-tab');
+  const oldWayCard   = document.getElementById('old-way-card');
+  const newWayCard   = document.getElementById('new-way-card');
+
+  function initComparisonTabs() {
+    if (window.innerWidth > 768) {
+      // Desktop: ensure both cards always visible
+      if (oldWayCard) oldWayCard.classList.remove('hidden-tab');
+      if (newWayCard) newWayCard.classList.remove('hidden-tab');
+      return;
+    }
+    // Mobile: default — hide old-way, show new-way
+    if (oldWayCard) oldWayCard.classList.add('hidden-tab');
+    if (newWayCard) newWayCard.classList.remove('hidden-tab');
+
+    document.getElementById('tab-old').classList.remove('comp-tab--active');
+    document.getElementById('tab-new').classList.add('comp-tab--active');
+  }
+
+  compTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      if (window.innerWidth > 768) return;
+      const targetId = tab.getAttribute('data-target');
+      // Toggle active tab
+      compTabs.forEach(t => t.classList.remove('comp-tab--active'));
+      tab.classList.add('comp-tab--active');
+      // Show/hide cards
+      [oldWayCard, newWayCard].forEach(card => {
+        if (!card) return;
+        card.classList.toggle('hidden-tab', card.id !== targetId);
+      });
+    });
+  });
+
+  initComparisonTabs();
+  window.addEventListener('resize', initComparisonTabs);
+
+  /* ─── TOUCH SWIPE HINT on first carousel ────────── */
+  const firstCarousel = document.getElementById('services-carousel');
+  if (firstCarousel) {
+    let hinted = false;
+    const hintObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !hinted && window.innerWidth <= 768) {
+        hinted = true;
+        // Tiny nudge animation to hint at swipeability
+        setTimeout(() => {
+          firstCarousel.scrollBy({ left: 30, behavior: 'smooth' });
+          setTimeout(() => firstCarousel.scrollBy({ left: -30, behavior: 'smooth' }), 400);
+        }, 600);
+      }
+    }, { threshold: 0.6 });
+    hintObserver.observe(firstCarousel);
+  }
+
   console.log('%c🎺 Burra Katha', 'color:#E8431A;font-size:24px;font-weight:bold;font-family:sans-serif;');
   console.log('%cYour Story, Told Boldly.', 'color:#A0A0AB;font-size:14px;font-family:sans-serif;');
 

@@ -2066,3 +2066,244 @@ select option { background: var(--bg-card); }
   outline-offset: 3px;
   border-radius: 4px;
 }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE CAROUSEL SYSTEM
+   Activated only inside @media (max-width: 768px)
+═══════════════════════════════════════════════════════ */
+
+/* ─── Carousel Dots ─────────────────────────────────── */
+.carousel-dots {
+  display: none; /* hidden on desktop */
+}
+
+/* ─── Comparison Tabs ───────────────────────────────── */
+.comparison-tabs {
+  display: none; /* hidden on desktop */
+}
+
+/* ─── Why Us — mobile tab hidden card ───────────────── */
+@media (max-width: 768px) {
+
+  /* ── Section padding tightened ── */
+  :root { --section-padding: 48px 0; }
+
+  /* ── About: hide decorative card stack on mobile ── */
+  .about-visual {
+    display: none;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .about-content {
+    padding: 0;
+  }
+
+  /* ── Carousel wrapper ── */
+  .carousel-wrapper {
+    position: relative;
+    /* negative margin to break out of container padding, then re-pad for scroll */
+    margin: 0 calc(-1 * var(--container-pad));
+    padding: 0 var(--container-pad);
+  }
+
+  /* ─── Services Carousel ──────────────────────────── */
+  #services-carousel.services-grid--6 {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--container-pad);
+    gap: 14px;
+    padding-bottom: 12px;
+    /* hide scrollbar but keep functionality */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* override desktop grid */
+    grid-template-columns: none;
+  }
+  #services-carousel.services-grid--6::-webkit-scrollbar { display: none; }
+
+  #services-carousel .service-card {
+    flex: 0 0 88vw;
+    max-width: 340px;
+    scroll-snap-align: start;
+    border-radius: 22px;
+  }
+  /* first card: add left padding via margin so snap starts flush */
+  #services-carousel .service-card:first-child { margin-left: 0; }
+  #services-carousel .service-card:last-child  { margin-right: var(--container-pad); }
+
+  /* ─── Portfolio Carousel ─────────────────────────── */
+  #portfolio-carousel.portfolio-featured {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--container-pad);
+    gap: 14px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 0;
+  }
+  #portfolio-carousel.portfolio-featured::-webkit-scrollbar { display: none; }
+
+  #portfolio-carousel .portfolio-card--main {
+    flex: 0 0 88vw;
+    max-width: 340px;
+    scroll-snap-align: start;
+  }
+  #portfolio-carousel .portfolio-card--main:last-child { margin-right: var(--container-pad); }
+
+  /* ─── Process Carousel ───────────────────────────── */
+  #process-carousel.process-timeline {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--container-pad);
+    gap: 14px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* override desktop grid */
+    grid-template-columns: none;
+  }
+  #process-carousel.process-timeline::-webkit-scrollbar { display: none; }
+
+  #process-carousel .process-step {
+    flex: 0 0 80vw;
+    max-width: 300px;
+    scroll-snap-align: start;
+    border-radius: 20px;
+  }
+  #process-carousel .process-step:last-child { margin-right: var(--container-pad); }
+
+  /* ─── Testimonials Carousel ──────────────────────── */
+  #testimonials-carousel.testimonials-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--container-pad);
+    gap: 14px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* override desktop grid */
+    grid-template-columns: none;
+  }
+  #testimonials-carousel.testimonials-grid::-webkit-scrollbar { display: none; }
+
+  #testimonials-carousel .testimonial-card {
+    flex: 0 0 85vw;
+    max-width: 320px;
+    scroll-snap-align: start;
+    /* undo the desktop grid-column span */
+    grid-column: unset;
+  }
+  #testimonials-carousel .testimonial-card:last-child { margin-right: var(--container-pad); }
+  #testimonials-carousel .testimonial-card--cta { min-height: 260px; }
+
+  /* ─── Carousel Dots ──────────────────────────────── */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    padding: 0 var(--container-pad);
+  }
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--border-hover);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition-spring);
+    flex-shrink: 0;
+  }
+
+  .carousel-dot.active {
+    background: var(--orange);
+    width: 20px;
+    border-radius: 4px;
+  }
+
+  /* ─── Why Us Tab Switcher ────────────────────────── */
+  .comparison-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 6px;
+  }
+
+  .comp-tab {
+    flex: 1;
+    padding: 10px 8px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-spring);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .comp-tab.comp-tab--active {
+    background: var(--orange);
+    color: #fff;
+    box-shadow: 0 4px 16px var(--orange-glow);
+  }
+
+  /* Hide the vs-divider on mobile (tabs replace it) */
+  .vs-divider { display: none; }
+
+  /* On mobile, comparison cards stack but only one shows at a time */
+  .comparison-row {
+    gap: 0;
+  }
+  .comparison-card {
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out), max-height 0.4s ease;
+  }
+  .comparison-card.hidden-tab {
+    display: none;
+  }
+
+  /* ─── Service badge hidden on mobile in carousel ── */
+  .service-badge { display: none; }
+
+  /* ─── Tighter card padding on mobile ─────────────── */
+  .service-card {
+    padding: 22px 20px;
+  }
+  .process-step {
+    padding: 22px 20px;
+  }
+  .testimonial-card {
+    padding: 22px 20px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
+   EXTRA: 480px overrides for carousels
+═══════════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  #services-carousel .service-card     { flex: 0 0 90vw; }
+  #portfolio-carousel .portfolio-card--main { flex: 0 0 90vw; }
+  #process-carousel .process-step      { flex: 0 0 84vw; }
+  #testimonials-carousel .testimonial-card { flex: 0 0 88vw; }
+}
+
